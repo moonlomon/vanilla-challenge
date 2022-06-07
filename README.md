@@ -1,8 +1,8 @@
 # Vanilla
 
-vanilla clone start 22.06.06.
+Vanilla challenge start 22.06.06.
 
-## 22.06.07. #2.1 ~ #2.6 vanilla readme
+## 22.06.07. #2.1 ~ #2.6 vanilla challenge readme
 
 - Number type data -> 2, 2.2 ... but in detail 2 = integer, 2.2 = float
 
