@@ -1,4 +1,4 @@
-# Vanilla
+# Vanilla Challenge
 
 Vanilla challenge start 22.06.06.
 
