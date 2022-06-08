@@ -74,7 +74,7 @@ obj.hello(2, 4);
 
 ![3](https://user-images.githubusercontent.com/103993019/172543567-42b9610f-218b-4449-ab01-c19d45a57108.PNG)
 
-## 22.06.08. #2.9 ~ #2.12
+## #2.9 ~ #2.12
 
 - function기능의 통용된 사용법은 return을 포함한 함수식을 통해 나온 값을 활용하는 것이다.
 
@@ -117,8 +117,6 @@ console.log("I have solved it! " + calculator.min(50));
 ![1](https://user-images.githubusercontent.com/103993019/172554591-cc0f085c-eb9c-4564-afed-eda3d05d299a.PNG)
 ![2](https://user-images.githubusercontent.com/103993019/172554599-b32cfe76-b7df-40aa-b4d6-b66a290cc031.PNG)
 
-
-
 - 추가로 함수를 연달아 두번 출력 할 경우 add에서 쓰고 출력한 number 값이 사라지지 않기 때문에 add에서 계산 된 number가 그대로 min에 쓰이게 된다.
 
 ```javascript
@@ -140,3 +138,47 @@ console.log("I have solved it! " + calculator.min(50));
 ```
 
 ![3](https://user-images.githubusercontent.com/103993019/172554601-ff7868a8-ca3b-4466-9aa8-c01dc3117bd3.PNG)
+
+## #2.13
+
+- prompt를 사용하면 사용자가 직접 입력한 값을 코딩에 써먹을 수 있다.
+
+```javascript
+const age = prompt("How old are you?");
+
+console.log(age);
+```
+
+<!--prompt이미지-->
+<!--콘솔이미지-->
+
+- prompt의 입력된 값들은 전부 string(문자)으로 인식하게 된다. 데이터의 타입을 확인인하는 방법은 type off를 앞에 붙히면 된다.
+
+```javascript
+const age = prompt("How old are you?");
+
+console.log(typeof age);
+```
+
+<!--prompt이미지-->
+<!--콘솔이미지-->
+
+- palseInt내장함수를 이용하면 데이터를 integer(자연수)의 형태로 변환한 수 있다. "감자"처럼 애초에 숫자조차 없는 데이터는 typeof 없이 parseInt과정에서 NaN(숫자아님)으로 출력된다. 참고로 NaN은 Number이다.
+
+```javascript
+const age = prompt("How old are you?");
+
+console.log(typeof parseInt(age));
+```
+
+<!--프롬프트이미지-->
+<!--콘솔이미지-->
+
+```javascript
+const age = prompt("How old are you?");
+
+console.log(parseInt(age));
+```
+
+<!--프롬프트이미지-->
+<!--콘솔이미지-->
