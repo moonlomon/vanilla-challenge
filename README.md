@@ -250,5 +250,7 @@ if (isNaN(age)) {
 }
 ```
 
-<!--어른이미지-->
-<!--애기노인이미지-->
+![1](https://user-images.githubusercontent.com/103993019/172577843-9c31882b-5117-4682-9f60-dd87a38deb4b.PNG)
+![2](https://user-images.githubusercontent.com/103993019/172577848-eb37a1bb-7de9-4085-9210-88048e060260.PNG)
+![3](https://user-images.githubusercontent.com/103993019/172577850-946fb431-84d3-440d-8e73-aa1daaeb1c27.PNG)
+![4](https://user-images.githubusercontent.com/103993019/172577858-b06b0809-3289-47c2-8bd4-ae366f38a6cf.PNG)
