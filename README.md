@@ -114,8 +114,10 @@ console.log("I have solved it! " + calculator.min(50));
 
 - calculator라는 object 안에 각각 add함수와 min함수를 적용한 경우다.
 
-<!--더하기이미지-->
-<!--빼기이미지-->
+![1](https://user-images.githubusercontent.com/103993019/172554591-cc0f085c-eb9c-4564-afed-eda3d05d299a.PNG)
+![2](https://user-images.githubusercontent.com/103993019/172554599-b32cfe76-b7df-40aa-b4d6-b66a290cc031.PNG)
+
+
 
 - 추가로 함수를 연달아 두번 출력 할 경우 add에서 쓰고 출력한 number 값이 사라지지 않기 때문에 add에서 계산 된 number가 그대로 min에 쓰이게 된다.
 
@@ -137,4 +139,4 @@ console.log("I have solved it! " + calculator.add(50));
 console.log("I have solved it! " + calculator.min(50));
 ```
 
-<!--두개 이미지-->
+![3](https://user-images.githubusercontent.com/103993019/172554601-ff7868a8-ca3b-4466-9aa8-c01dc3117bd3.PNG)
