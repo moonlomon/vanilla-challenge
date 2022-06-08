@@ -149,12 +149,8 @@ const age = prompt("How old are you?");
 console.log(age);
 ```
 
-
-
 ![1](https://user-images.githubusercontent.com/103993019/172561270-4ec23bb9-354f-461a-ae2a-05afe41337a5.PNG)
 ![2](https://user-images.githubusercontent.com/103993019/172561274-178e2f6e-710c-4bca-b3ea-9f0b96d4332f.PNG)
-
-
 
 - prompt의 입력된 값들은 전부 string(문자)으로 인식하게 된다. 데이터의 타입을 확인인하는 방법은 type off를 앞에 붙히면 된다.
 
@@ -178,7 +174,6 @@ console.log(typeof parseInt(age));
 ![5](https://user-images.githubusercontent.com/103993019/172561261-16e6dee2-6002-47b6-8fd3-ddbb3c30a462.PNG)
 ![6](https://user-images.githubusercontent.com/103993019/172561264-13f4fe74-7616-42f9-ade8-11783c8540c2.PNG)
 
-
 ```javascript
 const age = prompt("How old are you?");
 
@@ -187,3 +182,36 @@ console.log(parseInt(age));
 
 ![7](https://user-images.githubusercontent.com/103993019/172561267-c3ddaf15-ea17-4fe5-a7eb-4592d2b74201.PNG)
 ![8](https://user-images.githubusercontent.com/103993019/172561269-2e557c05-7db1-4fe0-ac4e-fb1bd26eb33f.PNG)
+
+## #2.17
+
+### 내장함수 isNaN()
+
+- isNaN 내장함수는 입력된 데이터가 string이면 true를 아니면 false를 반환한다.
+  "1", "감자"처럼 묶인 경우에는 전부 string으로 인식하지 않고 따옴표를 벗겨낸 데이터 값을 확인한다.
+
+```javascript
+console.log(isNaN(123));
+console.log(isNaN("123"));
+console.log(isNaN("감자"));
+```
+
+<!--nan 이미지-->
+
+### 조건문 if()
+
+- if(){~~~~} 에서 ()안의 값이 true일 경우 {}안에 코드가 실행된다.
+  if()가 true가 아닐경우 코드를 실행하지 않거나 else{~~~} 혹은 elseif(){~~~}에 있는 코드로 넘어가 실행된다.
+
+```javascript
+const age = prompt("당신의 나이는?");
+
+if (isNaN(age)) {
+  console.log("나이를 입력해주세요");
+} else {
+  console.log("당신의 나이는 " + age + " 입니다.");
+}
+```
+
+<!--true이미지-->
+<!--false이미지-->
