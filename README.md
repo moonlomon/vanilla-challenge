@@ -41,8 +41,9 @@ hey();
 
 - 위처럼 function을 만들어 준 후 function의 이름인 hey()만 입력해서 실행하면 funcion안에 alert와 console.log 코드들이 작동한다.
 
-<!--알러트 이미지-->
-<!--콘솔 이미지-->
+![1](https://user-images.githubusercontent.com/103993019/172543558-8ab10ad3-eeff-42d2-b83a-819beb087046.PNG)
+
+
 
 - 또한 변수를 지정해주면 변수에 따른 여러 결과물들을 출력하는 덩어리를 만들어 줄 수 있다.
 
@@ -57,7 +58,8 @@ hello("MJ", "JM");
 
 - 위와 같이 코드를 입력후 실행하면 변수에 따른 console.log가 출력된다.
 
-<!--이미지-->
+![2](https://user-images.githubusercontent.com/103993019/172543564-eac4299e-ce9a-43b5-a657-9d45d731d610.PNG)
+
 
 - function은 object에 넣어 object의 요소를 뽑아 쓰는 것으로 기능을 할 수 있다.
 
@@ -73,4 +75,4 @@ console.log(obj.name);
 obj.hello(2, 4);
 ```
 
-<!--콘솔이미지-->
+![3](https://user-images.githubusercontent.com/103993019/172543567-42b9610f-218b-4449-ab01-c19d45a57108.PNG)
