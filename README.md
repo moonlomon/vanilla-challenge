@@ -202,7 +202,9 @@ console.log(isNaN("123"));
 console.log(isNaN("감자"));
 ```
 
-<!--nan 이미지-->
+![1](https://user-images.githubusercontent.com/103993019/172572672-5eb26de1-7de9-44e3-918a-fbaf30c82117.PNG)
+
+
 
 ### 조건문 if()
 
@@ -219,5 +221,8 @@ if (isNaN(age)) {
 }
 ```
 
-<!--true이미지-->
-<!--false이미지-->
+![2](https://user-images.githubusercontent.com/103993019/172572682-d1a367d2-3725-4158-889f-bbf29c44baf1.PNG)
+![3](https://user-images.githubusercontent.com/103993019/172572686-8c67ffa1-26c9-4ef2-b921-2f7ce7a55b02.PNG)
+![4](https://user-images.githubusercontent.com/103993019/172572705-13782aac-e31b-4fc9-9736-ffd3a7ff9b91.PNG)
+![5](https://user-images.githubusercontent.com/103993019/172572707-5778097b-5c1d-41f4-bdf3-e3f11df20d50.PNG)
+
