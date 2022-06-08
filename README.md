@@ -149,8 +149,12 @@ const age = prompt("How old are you?");
 console.log(age);
 ```
 
-<!--prompt이미지-->
-<!--콘솔이미지-->
+
+
+![1](https://user-images.githubusercontent.com/103993019/172561270-4ec23bb9-354f-461a-ae2a-05afe41337a5.PNG)
+![2](https://user-images.githubusercontent.com/103993019/172561274-178e2f6e-710c-4bca-b3ea-9f0b96d4332f.PNG)
+
+
 
 - prompt의 입력된 값들은 전부 string(문자)으로 인식하게 된다. 데이터의 타입을 확인인하는 방법은 type off를 앞에 붙히면 된다.
 
@@ -160,8 +164,8 @@ const age = prompt("How old are you?");
 console.log(typeof age);
 ```
 
-<!--prompt이미지-->
-<!--콘솔이미지-->
+![3](https://user-images.githubusercontent.com/103993019/172561282-cf18a7b0-6e77-4b0c-8117-fc9c966b57c7.PNG)
+![4](https://user-images.githubusercontent.com/103993019/172561259-7a0adb07-fb7c-4e3d-b03d-db653a3e9a3e.PNG)
 
 - palseInt내장함수를 이용하면 데이터를 integer(자연수)의 형태로 변환한 수 있다. "감자"처럼 애초에 숫자조차 없는 데이터는 typeof 없이 parseInt과정에서 NaN(숫자아님)으로 출력된다. 참고로 NaN은 Number이다.
 
@@ -171,8 +175,9 @@ const age = prompt("How old are you?");
 console.log(typeof parseInt(age));
 ```
 
-<!--프롬프트이미지-->
-<!--콘솔이미지-->
+![5](https://user-images.githubusercontent.com/103993019/172561261-16e6dee2-6002-47b6-8fd3-ddbb3c30a462.PNG)
+![6](https://user-images.githubusercontent.com/103993019/172561264-13f4fe74-7616-42f9-ade8-11783c8540c2.PNG)
+
 
 ```javascript
 const age = prompt("How old are you?");
@@ -180,5 +185,5 @@ const age = prompt("How old are you?");
 console.log(parseInt(age));
 ```
 
-<!--프롬프트이미지-->
-<!--콘솔이미지-->
+![7](https://user-images.githubusercontent.com/103993019/172561267-c3ddaf15-ea17-4fe5-a7eb-4592d2b74201.PNG)
+![8](https://user-images.githubusercontent.com/103993019/172561269-2e557c05-7db1-4fe0-ac4e-fb1bd26eb33f.PNG)
