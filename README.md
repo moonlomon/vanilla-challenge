@@ -43,8 +43,6 @@ hey();
 
 ![1](https://user-images.githubusercontent.com/103993019/172543558-8ab10ad3-eeff-42d2-b83a-819beb087046.PNG)
 
-
-
 - 또한 변수를 지정해주면 변수에 따른 여러 결과물들을 출력하는 덩어리를 만들어 줄 수 있다.
 
 ```javascript
@@ -59,7 +57,6 @@ hello("MJ", "JM");
 - 위와 같이 코드를 입력후 실행하면 변수에 따른 console.log가 출력된다.
 
 ![2](https://user-images.githubusercontent.com/103993019/172543564-eac4299e-ce9a-43b5-a657-9d45d731d610.PNG)
-
 
 - function은 object에 넣어 object의 요소를 뽑아 쓰는 것으로 기능을 할 수 있다.
 
@@ -76,3 +73,68 @@ obj.hello(2, 4);
 ```
 
 ![3](https://user-images.githubusercontent.com/103993019/172543567-42b9610f-218b-4449-ab01-c19d45a57108.PNG)
+
+## 22.06.08. #2.9 ~ #2.12
+
+- function기능의 통용된 사용법은 return을 포함한 함수식을 통해 나온 값을 활용하는 것이다.
+
+```javascript
+let number = 100;
+
+const calculator = {
+  add: function (a) {
+    number = number + a;
+    return "The anwser is " + number;
+  },
+  min: function (a) {
+    number = number - a;
+    return "The anwser is " + number;
+  },
+};
+
+console.log("I have solved it! " + calculator.add(50));
+```
+
+```javascript
+let number = 100;
+
+const calculator = {
+  add: function (a) {
+    number = number + a;
+    return "The anwser is " + number;
+  },
+  min: function (a) {
+    number = number - a;
+    return "The anwser is " + number;
+  },
+};
+
+console.log("I have solved it! " + calculator.min(50));
+```
+
+- calculator라는 object 안에 각각 add함수와 min함수를 적용한 경우다.
+
+<!--더하기이미지-->
+<!--빼기이미지-->
+
+- 추가로 함수를 연달아 두번 출력 할 경우 add에서 쓰고 출력한 number 값이 사라지지 않기 때문에 add에서 계산 된 number가 그대로 min에 쓰이게 된다.
+
+```javascript
+let number = 100;
+
+const calculator = {
+  add: function (a) {
+    number = number + a;
+    return "The anwser is " + number;
+  },
+  min: function (a) {
+    number = number - a;
+    return "The anwser is " + number;
+  },
+};
+
+console.log("I have solved it! " + calculator.add(50));
+console.log("I have solved it! " + calculator.min(50));
+```
+
+<!--두개 이미지-->
