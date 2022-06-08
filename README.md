@@ -212,7 +212,7 @@ console.log(isNaN("감자"));
 
 ![1](https://user-images.githubusercontent.com/103993019/172572672-5eb26de1-7de9-44e3-918a-fbaf30c82117.PNG)
 
-### 조건문 if()
+### 조건문 if() elseif() else
 
 - if(){~~~~} 에서 ()안의 값이 true일 경우 {}안에 코드가 실행된다.
   if()가 true가 아닐경우 코드를 실행하지 않거나 else{~~~} 혹은 elseif(){~~~}에 있는 코드로 넘어가 실행된다.
@@ -231,3 +231,24 @@ if (isNaN(age)) {
 ![3](https://user-images.githubusercontent.com/103993019/172572686-8c67ffa1-26c9-4ef2-b921-2f7ce7a55b02.PNG)
 ![4](https://user-images.githubusercontent.com/103993019/172572705-13782aac-e31b-4fc9-9736-ffd3a7ff9b91.PNG)
 ![5](https://user-images.githubusercontent.com/103993019/172572707-5778097b-5c1d-41f4-bdf3-e3f11df20d50.PNG)
+
+### &&(and)와 ||(or)
+
+- true && true => true, true && false => false, false && false => false다. &&(and)는 둘 다 true일 때 true를 반환한다.
+
+- true || true => true, true || false => true, false || false => false다. ||(or)는 둘 중 하나만 true이면 true를 반환한다.
+
+```javascript
+const age = prompt("당신의 나이는?");
+
+if (isNaN(age)) {
+  console.log("나이를 입력해주세요");
+} else if (age < 20 || age >= 100) {
+  console.log("술은 어른되고 젊을 때 마시는거에요");
+} else if (age >= 20 && age < 100) {
+  console.log("즐술");
+}
+```
+
+<!--어른이미지-->
+<!--애기노인이미지-->
