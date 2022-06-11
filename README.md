@@ -254,3 +254,45 @@ if (isNaN(age)) {
 ![2](https://user-images.githubusercontent.com/103993019/172577848-eb37a1bb-7de9-4085-9210-88048e060260.PNG)
 ![3](https://user-images.githubusercontent.com/103993019/172577850-946fb431-84d3-440d-8e73-aa1daaeb1c27.PNG)
 ![4](https://user-images.githubusercontent.com/103993019/172577858-b06b0809-3289-47c2-8bd4-ae366f38a6cf.PNG)
+
+## 22.06.08. #3.0 ~ #3.2
+
+### console에 document 호출하기
+
+- 브라우저 console에 document를 호출하면 해당 브라우저랑 연결된 HTML을 보여준다.
+  또한 console.dir(document)로 호출을 하면 HTML 내부의 속성들이 object(객체)의 형식으로 나열되어 보여진다.
+  js에서 object의 요소들을 불러올 때 처럼 document.title을 써서 호출하면 정말로 HTML코드의 title property(요소)의 key(값)를 가져올 수 있고 값을 변환 할 수도 있다.
+  물론 이는 브라우저의 console 뿐만 아니라 vsc의 js파일에서도 가능하다.
+
+<!--document와 dir이미지-->
+<!--document와 dir이미지-->
+<!--title이미지-->
+<!--vsc이미지-->
+
+### element(속성) 불러오기
+
+- console.dir()을 통해 객체형태로 document를 보면 수많은 요소들 중 getElementsById라는 것이 있다.
+  이는 요소들 중 mothod값을 가지는 함수형태의 요소로 이를 이용하면 특정 id값을 가지는 HTML의 부분을 가져올 수 있다.
+  이 때 이러한 HTML의 부분을 JS에서는 element(속성)라고 부른다.
+  또한 title의 경우와 마찬가지로 VSC를 통한 JS조작을 통해 브라우저에서 보여지는 값을 변경할 수도 있다.
+
+<!--getElementById-->
+<!--h1처음이미지-->
+<!--innertext-->
+<!--변환-->
+
+- 추가로 속성을 불러오는데는 getElementById 외에도 태그, class이름 등 불러오고 싶은 방식에 따라 getElementsByClassName, getElementsByTagName 등을 쓸 수 있고 css선택자 방식을 적극 사용할 경우 querySelector 혹은 querySelectorAll을 이용할 수 있다.
+
+```javascript
+const classes = document.getElementsByClassName("int");
+const divs = document.getElementsByTagName("div");
+const css1 = document.querySelector("div > h1");
+const css2 = document.querySelectorAll("div");
+
+console.log(classes);
+console.log(divs);
+console.log(css1);
+console.log(css2);
+```
+
+<!--console 여러개-->
