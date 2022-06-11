@@ -264,10 +264,12 @@ if (isNaN(age)) {
   js에서 object의 요소들을 불러올 때 처럼 document.title을 써서 호출하면 정말로 HTML코드의 title property(요소)의 key(값)를 가져올 수 있고 값을 변환 할 수도 있다.
   물론 이는 브라우저의 console 뿐만 아니라 vsc의 js파일에서도 가능하다.
 
-<!--document와 dir이미지-->
-<!--document와 dir이미지-->
-<!--title이미지-->
-<!--vsc이미지-->
+![1](https://user-images.githubusercontent.com/103993019/173184652-33769212-8cb5-4a33-a2b4-d256d3665399.PNG)
+![2](https://user-images.githubusercontent.com/103993019/173184654-6b843e94-0c46-47bb-bc9f-217e61f3ac40.PNG)
+![3](https://user-images.githubusercontent.com/103993019/173184655-8018b666-85a8-40cf-bf4d-bd3b66c5088a.PNG)
+![4](https://user-images.githubusercontent.com/103993019/173184656-8ecaf4e6-ff7d-4c24-ab07-b9d65527f02d.PNG)
+
+
 
 ### element(속성) 불러오기
 
@@ -276,10 +278,11 @@ if (isNaN(age)) {
   이 때 이러한 HTML의 부분을 JS에서는 element(속성)라고 부른다.
   또한 title의 경우와 마찬가지로 VSC를 통한 JS조작을 통해 브라우저에서 보여지는 값을 변경할 수도 있다.
 
-<!--getElementById-->
-<!--h1처음이미지-->
-<!--innertext-->
-<!--변환-->
+![5](https://user-images.githubusercontent.com/103993019/173184657-a0ba1ab8-d142-46aa-b902-7dde6ffa1741.PNG)
+![6](https://user-images.githubusercontent.com/103993019/173184658-bb8c0cf0-3c01-4a82-98ca-94b9ac2b1067.PNG)
+![7](https://user-images.githubusercontent.com/103993019/173184659-d2a2fee7-f400-4673-86aa-c8987446e2b1.PNG)
+![8](https://user-images.githubusercontent.com/103993019/173184662-83bd7950-2d42-43a7-9576-f465ee6bb740.PNG)
+
 
 - 추가로 속성을 불러오는데는 getElementById 외에도 태그, class이름 등 불러오고 싶은 방식에 따라 getElementsByClassName, getElementsByTagName 등을 쓸 수 있고 css선택자 방식을 적극 사용할 경우 querySelector 혹은 querySelectorAll을 이용할 수 있다.
 
@@ -295,4 +298,4 @@ console.log(css1);
 console.log(css2);
 ```
 
-<!--console 여러개-->
+![9](https://user-images.githubusercontent.com/103993019/173184663-b688d3c1-bd21-40b0-b80a-e63b4ff4fef9.PNG)
