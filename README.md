@@ -310,7 +310,8 @@ const title = document.querySelector("div > h1");
 title.style.color = "blue";
 ```
 
-<!--style이미지-->
+![1](https://user-images.githubusercontent.com/103993019/173230957-c4537b03-6c85-4294-ba9b-34e1c474b65f.PNG)
+
 
 ### js의 기능부여 event!
 
@@ -328,7 +329,8 @@ function handleTitleClick() {
 title.addEventListener("click", handleTitleClick);
 ```
 
-<!--이벤트테스트-->
+![2](https://user-images.githubusercontent.com/103993019/173230961-2f08563a-98be-4050-acf1-233e083ab59d.PNG)
+
 
 ### 이벤트로 style 바꾸기
 
@@ -344,7 +346,7 @@ function handleTitleClick() {
 title.addEventListener("click", handleTitleClick);
 ```
 
-<!--orange title-->
+![3](https://user-images.githubusercontent.com/103993019/173230962-bd9e4efd-03db-4262-be6c-a50a3bdf71e0.PNG)
 
 ### click 외 다른 event들
 
@@ -370,8 +372,10 @@ title.addEventListener("mouseenter", handleTitleEnter);
 title.addEventListener("mouseleave", handleTitleLeave);
 ```
 
-<!--mouseenter-->
-<!--mouseleave-->
+![4](https://user-images.githubusercontent.com/103993019/173230963-2a11c773-9256-4347-9430-b32263790110.PNG)
+![5](https://user-images.githubusercontent.com/103993019/173230964-d1a6d5ee-c04b-43ee-a580-20b3879ab1c2.PNG)
+
+
 
 - addEventListener("click") 대신 property의 이름 그대로 onclick을 쓸 수도 있다.
   단, removeEventListenr와 같이 쓸 수 있는 특징 때문에 니꼬쌤은 addEventListener을 추천하셨다.
@@ -421,7 +425,7 @@ window.addEventListener("online", handleWindowOnline);
 window.addEventListener("offline", handleWindowsOffline);
 ```
 
-<!--scroll-->
-<!--resize-->
-<!--offline-->
-<!--online-->
+![6](https://user-images.githubusercontent.com/103993019/173230966-2fdf85e9-72be-437a-9558-37418643b239.PNG)
+![7](https://user-images.githubusercontent.com/103993019/173230967-98241849-7ec1-461a-9139-c2e6856d1373.PNG)
+![8](https://user-images.githubusercontent.com/103993019/173230968-221e0b41-3052-425d-8d45-e3ac6250da28.PNG)
+![9](https://user-images.githubusercontent.com/103993019/173230969-f9f31422-9607-4be8-bcca-b63926a4e608.PNG)
