@@ -269,8 +269,6 @@ if (isNaN(age)) {
 ![3](https://user-images.githubusercontent.com/103993019/173184655-8018b666-85a8-40cf-bf4d-bd3b66c5088a.PNG)
 ![4](https://user-images.githubusercontent.com/103993019/173184656-8ecaf4e6-ff7d-4c24-ab07-b9d65527f02d.PNG)
 
-
-
 ### element(속성) 불러오기
 
 - console.dir()을 통해 객체형태로 document를 보면 수많은 요소들 중 getElementsById라는 것이 있다.
@@ -282,7 +280,6 @@ if (isNaN(age)) {
 ![6](https://user-images.githubusercontent.com/103993019/173184658-bb8c0cf0-3c01-4a82-98ca-94b9ac2b1067.PNG)
 ![7](https://user-images.githubusercontent.com/103993019/173184659-d2a2fee7-f400-4673-86aa-c8987446e2b1.PNG)
 ![8](https://user-images.githubusercontent.com/103993019/173184662-83bd7950-2d42-43a7-9576-f465ee6bb740.PNG)
-
 
 - 추가로 속성을 불러오는데는 getElementById 외에도 태그, class이름 등 불러오고 싶은 방식에 따라 getElementsByClassName, getElementsByTagName 등을 쓸 수 있고 css선택자 방식을 적극 사용할 경우 querySelector 혹은 querySelectorAll을 이용할 수 있다.
 
@@ -299,3 +296,50 @@ console.log(css2);
 ```
 
 ![9](https://user-images.githubusercontent.com/103993019/173184663-b688d3c1-bd21-40b0-b80a-e63b4ff4fef9.PNG)
+
+## #3.3
+
+### js로 style 설정하기
+
+- 거의 모든 element들에는 style이 property로 들어있다.
+  따라서 object불러오는 것 처럼 style을 불러온 후 값을 변경하는 것으로 css작업도 할 수 있다.
+
+```javascript
+const title = document.querySelector("div > h1");
+
+title.style.color = "blue";
+```
+
+<!--style이미지-->
+
+### js의 기능부여 event!
+
+- 지정해준 element에 기능을 부여하는 공식이 있다.
+  title이란 변수로 element를 지정했다고 했을 때, title.addEventListener("조건", 함수)라고 쓰면 특정 조건을 하였을 때 함수가 작용하도록 element가 역할을 하는 것이다.
+  아래는 hello를 클릭했을 때 console.log가 작동되도록 코드를 짠 것이다.
+
+```javascript
+const title = document.querySelector("div > h1");
+
+function handleTitleClick() {
+  console.log("이벤트 테스트!");
+}
+
+title.addEventListener("click", handleTitleClick);
+```
+
+<!--이벤트테스트-->
+
+### 이벤트로 style 바꾸기
+
+함수 안에 스타일을 넣어주면 끗
+
+```javascript
+const title = document.querySelector("div > h1");
+
+function handleTitleClick() {
+  title.style.color = "orange";
+}
+
+title.addEventListener("click", handleTitleClick);
+```
