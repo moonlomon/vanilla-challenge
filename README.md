@@ -297,7 +297,7 @@ console.log(css2);
 
 ![9](https://user-images.githubusercontent.com/103993019/173184663-b688d3c1-bd21-40b0-b80a-e63b4ff4fef9.PNG)
 
-## #3.3
+## 22.06.12. #3.3 ~ 3.5
 
 ### js로 style 설정하기
 
@@ -343,3 +343,85 @@ function handleTitleClick() {
 
 title.addEventListener("click", handleTitleClick);
 ```
+
+<!--orange title-->
+
+### click 외 다른 event들
+
+- console.dir() 또는 https://developer.mozilla.org/ko/docs/Web/Events 사이트에서 또다른 event들을 찾아볼 수 있다.
+  그 중에 가장 대표적인 mouseenter와 mouseleave를 title의 event로 설정하고 각각의 function을 만들어주면 다음과 같이 할 수 있다.
+
+```javascript
+const title = document.querySelector("div > h1");
+
+function handleTitleClick() {
+  title.style.color = "orange";
+}
+
+function handleTitleEnter() {
+  title.innerText = "mouse here!";
+}
+function handleTitleLeave() {
+  title.innerText = "mouse gone..";
+}
+
+title.addEventListener("click", handleTitleClick);
+title.addEventListener("mouseenter", handleTitleEnter);
+title.addEventListener("mouseleave", handleTitleLeave);
+```
+
+<!--mouseenter-->
+<!--mouseleave-->
+
+- addEventListener("click") 대신 property의 이름 그대로 onclick을 쓸 수도 있다.
+  단, removeEventListenr와 같이 쓸 수 있는 특징 때문에 니꼬쌤은 addEventListener을 추천하셨다.
+
+```
+title.addEventListener("click", handleTitleClick) -> title.onclick = handleTitleClick
+```
+
+- eventlitening은 직접 만든 element외에 title, body 등에도 지정해줄 수 있다.
+  특정 element에 listening 하기 애매한 창 크기 변화, 스크롤 움직이기, 인터넷 연결여부 등의 event를 listening 해주고 싶을 때는 window에 해주면 된다.
+
+```javascript
+const title = document.querySelector("div > h1");
+
+function handleTitleClick() {
+  title.style.color = "orange";
+}
+
+function handleTitleEnter() {
+  title.innerText = "mouse here!";
+}
+
+function handleTitleLeave() {
+  title.innerText = "mouse gone..";
+}
+
+function handleWindowScroll() {
+  title.innerText = "Scroll faster!";
+}
+function handleWindowResize() {
+  title.innerText = "Change size";
+  document.body.style.backgroundColor = "teal";
+}
+function handleWindowsOffline() {
+  alert("I can't connect Internet.. Please check your computer that Wifi");
+}
+function handleWindowOnline() {
+  alert("Success connecting Internet!");
+}
+
+title.addEventListener("click", handleTitleClick);
+title.addEventListener("mouseenter", handleTitleEnter);
+title.addEventListener("mouseleave", handleTitleLeave);
+window.addEventListener("scroll", handleWindowScroll);
+window.addEventListener("resize", handleWindowResize);
+window.addEventListener("online", handleWindowOnline);
+window.addEventListener("offline", handleWindowsOffline);
+```
+
+<!--scroll-->
+<!--resize-->
+<!--offline-->
+<!--online-->
