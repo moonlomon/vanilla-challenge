@@ -618,7 +618,7 @@ Form.addEventListener("submit", handleEnter);
 
 ![6](https://user-images.githubusercontent.com/103993019/173310754-ee608260-b017-4639-ad95-3d8c2f9f18f5.PNG)
 
-## #4.5 ~
+## #4.5 ~ #4.7
 
 ### 이름불러오기 app 완성하기 + `${}`
 
@@ -661,3 +661,79 @@ Form.addEventListener("submit", handleEnter);
 
 ![7](https://user-images.githubusercontent.com/103993019/173310758-1d93b16d-19f2-4730-92b9-c9bc4515fd54.PNG)
 ![8](https://user-images.githubusercontent.com/103993019/173310761-94ccd3a2-af7a-4705-9269-4be51126df6f.PNG)
+
+### 브라우저 안에 작은 db에 유저이름 저장하기
+
+- 놀랍게도 브라우저에는 우리가 맘대로 데이터를 저장하거나 불러올 때 써먹을 수 있는 AIP창구가 있다.
+  개발자도구에서 찾을 수 있는 많은 API창구들 중 localStorage가 가장 쉽게 써먹기 좋다고 니꼬쌤이 말씀하셨다.
+
+<!--console.log-->
+<!--application-->
+
+- 요걸 함수에 활용하면 입력한 문자를 집어 넣는 것도 가능하다!
+
+```javascript
+const Form = document.querySelector("#login");
+const Name = document.querySelector("#login > input");
+const Int = document.querySelector("h1");
+const TOGGLE_CLASS = "hidden";
+
+function handleEnter(event) {
+  event.preventDefault();
+  Form.classList.toggle(TOGGLE_CLASS);
+  const userName = Name.value;
+  Int.innerText = `"Hello" ${userName}`;
+  Int.classList.toggle(TOGGLE_CLASS);
+  localStorage.setItem("userName", userName);
+}
+
+Form.addEventListener("submit", handleEnter);
+```
+
+<!--적용-->
+
+- localStorage에 값이 없으면 Form이 보이게, form에 값을 입력해서 값이 저장되었다면 Int가 나오도록 하게 되면
+
+```HTML
+<body>
+    <form class="hidden" id="login">
+      <input
+        required
+        maxlength="10"
+        type="text"
+        placeholder="What's your name?"
+      />
+      <button>click me</button>
+    </form>
+    <h1 class="hidden"></h1>
+    <script src="app.js"></script>
+  </body>
+```
+
+```javascript
+function handleEnter(event) {
+  event.preventDefault();
+  Form.classList.toggle(TOGGLE_CLASS);
+  const userName = Name.value;
+  inputUsername(userName);
+  localStorage.setItem(USERNAME_KEY, userName);
+}
+
+function inputUsername(userName) {
+  Int.innerText = `"Hello" ${userName}`;
+  Int.classList.toggle(TOGGLE_CLASS);
+}
+
+const savedUsername = localStorage.getItem(USERNAME_KEY);
+
+if (savedUsername === null) {
+  Form.classList.remove(TOGGLE_CLASS);
+  Form.addEventListener("submit", handleEnter);
+} else {
+  inputUsername(savedUsername);
+}
+```
+
+<!--이미지-->
+<!--이미지-->
+<!--이미지-->
