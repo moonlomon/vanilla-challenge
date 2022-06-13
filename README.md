@@ -667,8 +667,10 @@ Form.addEventListener("submit", handleEnter);
 - 놀랍게도 브라우저에는 우리가 맘대로 데이터를 저장하거나 불러올 때 써먹을 수 있는 AIP창구가 있다.
   개발자도구에서 찾을 수 있는 많은 API창구들 중 localStorage가 가장 쉽게 써먹기 좋다고 니꼬쌤이 말씀하셨다.
 
-<!--console.log-->
-<!--application-->
+![1](https://user-images.githubusercontent.com/103993019/173337999-600d5ccf-726d-4ea7-9afe-c06f2e41d25a.PNG)
+![2](https://user-images.githubusercontent.com/103993019/173338003-4792a8bc-9492-43f0-bfbb-ea1ef18219bd.PNG)
+
+
 
 - 요걸 함수에 활용하면 입력한 문자를 집어 넣는 것도 가능하다!
 
@@ -690,7 +692,8 @@ function handleEnter(event) {
 Form.addEventListener("submit", handleEnter);
 ```
 
-<!--적용-->
+![3](https://user-images.githubusercontent.com/103993019/173338007-4eba74cb-81a9-4f3f-9a18-5c0e7fe952f3.PNG)
+
 
 ### localStorage에 값이 없으면 Form이 보이게, form에 값을 입력해서 값이 저장되었다면 Int가 나오도록
 
@@ -736,6 +739,6 @@ if (savedUsername === null) {
 }
 ```
 
-<!--이미지-->
-<!--이미지-->
-<!--이미지-->
+![4](https://user-images.githubusercontent.com/103993019/173338009-fc200868-1aa0-415d-b21b-00a204ceb3a7.PNG)
+![5](https://user-images.githubusercontent.com/103993019/173338010-2da8b53d-f804-4893-bdad-3f8e80bce0f7.PNG)
+![6](https://user-images.githubusercontent.com/103993019/173338011-32ee9ca0-a060-4fe5-bc16-d7bc1617f46f.PNG)
