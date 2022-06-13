@@ -449,8 +449,9 @@ function handleTitleClick() {
 title.addEventListener("click", handleTitleClick);
 ```
 
-<!--teal-->
-<!--orange-->
+![1](https://user-images.githubusercontent.com/103993019/173275006-8b8dc060-325b-4e8a-8c41-07ef7048d5a0.PNG)
+![2](https://user-images.githubusercontent.com/103993019/173275010-79aa88c9-764f-439a-9716-42378c66552f.PNG)
+
 
 ### js를 css와 함께 써서 style 바꾸기
 
@@ -474,9 +475,9 @@ function handleTitleClick() {
 title.addEventListener("click", handleTitleClick);
 ```
 
-<!--style-->
-<!--console ""-->
-<!--console changeColor-->
+![3](https://user-images.githubusercontent.com/103993019/173275017-4b03ddb2-97d3-41d2-a80d-01ad12cec988.PNG)
+![4](https://user-images.githubusercontent.com/103993019/173275019-50972fd4-babe-4f81-b37d-9ca242595217.PNG)
+![5](https://user-images.githubusercontent.com/103993019/173275021-b971ed23-359c-48e4-8b29-f880fc701a14.PNG)
 
 ## 22.06.13. #3.8
 
@@ -501,8 +502,10 @@ function handleTitleClick() {
 title.addEventListener("click", handleTitleClick);
 ```
 
-<!--remove-->
-<!--add-->
+![6](https://user-images.githubusercontent.com/103993019/173275023-71142a63-9b0d-4ed4-b3a5-2d54774aec4e.PNG)
+![7](https://user-images.githubusercontent.com/103993019/173275024-783cd7f9-d707-476f-bd72-d08130d6f00c.PNG)
+
+
 
 ### 같은 기능 toggle 하나로 끝내기
 
@@ -518,6 +521,5 @@ function handleTitleClick() {
 
 title.addEventListener("click", handleTitleClick);
 ```
-
-<!--remove toggle-->
-<!--add toggle-->
+![8](https://user-images.githubusercontent.com/103993019/173275025-6722ed58-7c80-4d07-8833-bacd74e1e640.PNG)
+![9](https://user-images.githubusercontent.com/103993019/173275026-f06c21fe-cac3-42be-8cb1-014d7d455ec3.PNG)
