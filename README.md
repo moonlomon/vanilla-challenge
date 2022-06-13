@@ -692,7 +692,9 @@ Form.addEventListener("submit", handleEnter);
 
 <!--적용-->
 
-- localStorage에 값이 없으면 Form이 보이게, form에 값을 입력해서 값이 저장되었다면 Int가 나오도록 하게 되면
+### localStorage에 값이 없으면 Form이 보이게, form에 값을 입력해서 값이 저장되었다면 Int가 나오도록
+
+- 제목과 같은 기능을 하면서 새로고침을 해도 사라지지 않게 하려면 요렇게 하면 된다.
 
 ```HTML
 <body>
