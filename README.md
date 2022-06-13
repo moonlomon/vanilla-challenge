@@ -452,7 +452,6 @@ title.addEventListener("click", handleTitleClick);
 ![1](https://user-images.githubusercontent.com/103993019/173275006-8b8dc060-325b-4e8a-8c41-07ef7048d5a0.PNG)
 ![2](https://user-images.githubusercontent.com/103993019/173275010-79aa88c9-764f-439a-9716-42378c66552f.PNG)
 
-
 ### js를 css와 함께 써서 style 바꾸기
 
 - js로 element 내의 property를 찾아서 직접 style을 바꾸는 것도 가능하지만 니꼬쌤 왈 가능한 style은 css를 사용해 바꿔주는 것이 좋다고 하신다.
@@ -505,8 +504,6 @@ title.addEventListener("click", handleTitleClick);
 ![6](https://user-images.githubusercontent.com/103993019/173275023-71142a63-9b0d-4ed4-b3a5-2d54774aec4e.PNG)
 ![7](https://user-images.githubusercontent.com/103993019/173275024-783cd7f9-d707-476f-bd72-d08130d6f00c.PNG)
 
-
-
 ### 같은 기능 toggle 하나로 끝내기
 
 - 위의 함수는 포함여부 -> 추가 or 제거의 기능을 가지는데 처음부터 이 기능을 가진 내장함수가 존재한다.
@@ -521,5 +518,146 @@ function handleTitleClick() {
 
 title.addEventListener("click", handleTitleClick);
 ```
+
 ![8](https://user-images.githubusercontent.com/103993019/173275025-6722ed58-7c80-4d07-8833-bacd74e1e640.PNG)
 ![9](https://user-images.githubusercontent.com/103993019/173275026-f06c21fe-cac3-42be-8cb1-014d7d455ec3.PNG)
+
+## #4.0 ~ #4.4
+
+### 입력란에 적은 글을 표시하기
+
+- input안에 타이핑한 글씨 = value라는 property다.
+  따라서 alert나 console.log에 <엘리먼트>.value라고 해주면 입력한 글씨가 출력된다.
+
+```javascript
+const Name = document.querySelector("#login > input");
+const Click = document.querySelector("#login > button");
+
+function handleClick() {
+  alert("hello " + Name.value);
+}
+
+Click.addEventListener("click", handleClick);
+```
+
+<!--alert-->
+
+- 물론 함수안에 조건을 추가하면 좀 더 다채롭게 기능을 수행시킬 수 있다.
+  string data의 길이를 알고 싶을 때는 .length를 붙혀주면 된다.
+
+```javascript
+const Name = document.querySelector("#login > input");
+const Click = document.querySelector("#login > button");
+
+function handleClick() {
+  const username = Name.value;
+  if (username === "") {
+    alert("Write your name");
+  } else if (username.length > 10) {
+    alert("Too long your name");
+  } else {
+    alert("Hello " + username);
+  }
+}
+
+Click.addEventListener("click", handleClick);
+```
+
+<!--noname-->
+<!--longname-->
+<!--helloname-->
+
+### 함수에 argument 추가와 .preventDefault()로 기본동작 막기
+
+- 정석적인 HTML을 작성하여 위의 기능을 만들 경우 input에다가 attribute를 추가하고 div가 아닌 form으로 감싸주는 것으로 완성할 수 있다. 하지만 submit을 하는 순간 submit의 기본동작인 새로고침이 되어버린다. 함수에 argument를 추가하고 argument..preventDefault()를 함수에 넣어주면 새로고침 되는 것을 방지할 수 있다.
+
+```HTML
+<body>
+    <form id="login">
+      <input
+        required
+        maxlength="10"
+        type="text"
+        placeholder="What's your name?"
+      />
+      <button>click me</button>
+    </form>
+    <script src="app.js"></script>
+  </body>
+```
+
+```javascript
+const Form = document.querySelector("#login");
+const Name = document.querySelector("#login > input");
+
+function handleEnter(event) {
+  event.preventDefault();
+  console.log("Hello " + Name.value);
+}
+
+Form.addEventListener("submit", handleEnter);
+```
+
+<!--새로고침방지-->
+
+### addEventListener의 숨겨진 기능
+
+- addEventListener는 이벤트를 부여하여 지정해준 함수를 브라우저가 움직이게 할 뿐만 아니라 함수 안에 이벤트 자체의 정보도 object의 형식으로 보내고 있다. 내용을 보면 preventDefault()를 통해 defaultPrevented가 true값으로 되어있는 것을 확인할 수 있다.
+
+```javascript
+const Form = document.querySelector("#login");
+const Name = document.querySelector("#login > input");
+
+function handleEnter(event) {
+  event.preventDefault();
+  Form.classList.add();
+}
+
+Form.addEventListener("submit", handleEnter);
+```
+
+<!--event정보-->
+
+## #4.5 ~
+
+### 이름불러오기 app 완성하기 + `${}`
+
+- 위에 내용을 종합해 완성해보면 요렇게 된다.
+
+```javascript
+const Form = document.querySelector("#login");
+const Name = document.querySelector("#login > input");
+const Int = document.querySelector("h1");
+const TOGGLE_CLASS = "hidden";
+
+function handleEnter(event) {
+  event.preventDefault();
+  Form.classList.toggle(TOGGLE_CLASS);
+  Int.innerText = "Hello " + Name.value;
+  Int.classList.toggle(TOGGLE_CLASS);
+}
+
+Form.addEventListener("submit", handleEnter);
+```
+
+- 추가로 "Hello " + Name.value 부분은 string과 변수를 합친 것인데 요것을 `"Hello" ${Name.value}` 요렇게 해줄 수 있다.
+  니꼬쌤은 후자를 추천하심. 고렇다면 그렇게 바꿔준다.
+
+```javascript
+const Form = document.querySelector("#login");
+const Name = document.querySelector("#login > input");
+const Int = document.querySelector("h1");
+const TOGGLE_CLASS = "hidden";
+
+function handleEnter(event) {
+  event.preventDefault();
+  Form.classList.toggle(TOGGLE_CLASS);
+  Int.innerText = `"Hello " ${Name.value}`;
+  Int.classList.toggle(TOGGLE_CLASS);
+}
+
+Form.addEventListener("submit", handleEnter);
+```
+
+<!--form이미지-->
+<!--h1이미지-->

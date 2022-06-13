@@ -1,7 +1,13 @@
-const title = document.querySelector("div > h1");
+const Form = document.querySelector("#login");
+const Name = document.querySelector("#login > input");
+const Int = document.querySelector("h1");
+const TOGGLE_CLASS = "hidden";
 
-function handleTitleClick() {
-  title.classList.toggle("changeColor");
+function handleEnter(event) {
+  event.preventDefault();
+  Form.classList.toggle(TOGGLE_CLASS);
+  Int.innerText = `"Hello" ${Name.value}`;
+  Int.classList.toggle(TOGGLE_CLASS);
 }
 
-title.addEventListener("click", handleTitleClick);
+Form.addEventListener("submit", handleEnter);
