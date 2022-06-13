@@ -540,7 +540,8 @@ function handleClick() {
 Click.addEventListener("click", handleClick);
 ```
 
-<!--alert-->
+![1](https://user-images.githubusercontent.com/103993019/173310736-d0710956-b7ee-4f4b-8f15-8bf04e2fbe0c.PNG)
+
 
 - 물론 함수안에 조건을 추가하면 좀 더 다채롭게 기능을 수행시킬 수 있다.
   string data의 길이를 알고 싶을 때는 .length를 붙혀주면 된다.
@@ -563,9 +564,9 @@ function handleClick() {
 Click.addEventListener("click", handleClick);
 ```
 
-<!--noname-->
-<!--longname-->
-<!--helloname-->
+![2](https://user-images.githubusercontent.com/103993019/173310740-5ca2d3d9-06d7-48de-9f8f-0e467b36b8ed.PNG)
+![3](https://user-images.githubusercontent.com/103993019/173310747-3541b851-7d68-4d71-8c3e-2b41c88c3d57.PNG)
+![4](https://user-images.githubusercontent.com/103993019/173310749-75c8c12e-54a3-491d-826f-3626414d36de.PNG)
 
 ### 함수에 argument 추가와 .preventDefault()로 기본동작 막기
 
@@ -598,7 +599,9 @@ function handleEnter(event) {
 Form.addEventListener("submit", handleEnter);
 ```
 
-<!--새로고침방지-->
+![5](https://user-images.githubusercontent.com/103993019/173310752-b4e8bbb9-ab8d-463f-8b95-1c09e20b7a69.PNG)
+
+
 
 ### addEventListener의 숨겨진 기능
 
@@ -616,7 +619,7 @@ function handleEnter(event) {
 Form.addEventListener("submit", handleEnter);
 ```
 
-<!--event정보-->
+![6](https://user-images.githubusercontent.com/103993019/173310754-ee608260-b017-4639-ad95-3d8c2f9f18f5.PNG)
 
 ## #4.5 ~
 
@@ -659,5 +662,6 @@ function handleEnter(event) {
 Form.addEventListener("submit", handleEnter);
 ```
 
-<!--form이미지-->
-<!--h1이미지-->
+![7](https://user-images.githubusercontent.com/103993019/173310758-1d93b16d-19f2-4730-92b9-c9bc4515fd54.PNG)
+![8](https://user-images.githubusercontent.com/103993019/173310761-94ccd3a2-af7a-4705-9269-4be51126df6f.PNG)
+
