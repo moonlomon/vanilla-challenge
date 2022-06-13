@@ -542,7 +542,6 @@ Click.addEventListener("click", handleClick);
 
 ![1](https://user-images.githubusercontent.com/103993019/173310736-d0710956-b7ee-4f4b-8f15-8bf04e2fbe0c.PNG)
 
-
 - 물론 함수안에 조건을 추가하면 좀 더 다채롭게 기능을 수행시킬 수 있다.
   string data의 길이를 알고 싶을 때는 .length를 붙혀주면 된다.
 
@@ -601,8 +600,6 @@ Form.addEventListener("submit", handleEnter);
 
 ![5](https://user-images.githubusercontent.com/103993019/173310752-b4e8bbb9-ab8d-463f-8b95-1c09e20b7a69.PNG)
 
-
-
 ### addEventListener의 숨겨진 기능
 
 - addEventListener는 이벤트를 부여하여 지정해준 함수를 브라우저가 움직이게 할 뿐만 아니라 함수 안에 이벤트 자체의 정보도 object의 형식으로 보내고 있다. 내용을 보면 preventDefault()를 통해 defaultPrevented가 true값으로 되어있는 것을 확인할 수 있다.
@@ -613,7 +610,7 @@ const Name = document.querySelector("#login > input");
 
 function handleEnter(event) {
   event.preventDefault();
-  Form.classList.add();
+  console.log(event);
 }
 
 Form.addEventListener("submit", handleEnter);
@@ -664,4 +661,3 @@ Form.addEventListener("submit", handleEnter);
 
 ![7](https://user-images.githubusercontent.com/103993019/173310758-1d93b16d-19f2-4730-92b9-c9bc4515fd54.PNG)
 ![8](https://user-images.githubusercontent.com/103993019/173310761-94ccd3a2-af7a-4705-9269-4be51126df6f.PNG)
-
