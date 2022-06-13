@@ -312,7 +312,6 @@ title.style.color = "blue";
 
 ![1](https://user-images.githubusercontent.com/103993019/173230957-c4537b03-6c85-4294-ba9b-34e1c474b65f.PNG)
 
-
 ### js의 기능부여 event!
 
 - 지정해준 element에 기능을 부여하는 공식이 있다.
@@ -330,7 +329,6 @@ title.addEventListener("click", handleTitleClick);
 ```
 
 ![2](https://user-images.githubusercontent.com/103993019/173230961-2f08563a-98be-4050-acf1-233e083ab59d.PNG)
-
 
 ### 이벤트로 style 바꾸기
 
@@ -374,8 +372,6 @@ title.addEventListener("mouseleave", handleTitleLeave);
 
 ![4](https://user-images.githubusercontent.com/103993019/173230963-2a11c773-9256-4347-9430-b32263790110.PNG)
 ![5](https://user-images.githubusercontent.com/103993019/173230964-d1a6d5ee-c04b-43ee-a580-20b3879ab1c2.PNG)
-
-
 
 - addEventListener("click") 대신 property의 이름 그대로 onclick을 쓸 수도 있다.
   단, removeEventListenr와 같이 쓸 수 있는 특징 때문에 니꼬쌤은 addEventListener을 추천하셨다.
@@ -429,3 +425,99 @@ window.addEventListener("offline", handleWindowsOffline);
 ![7](https://user-images.githubusercontent.com/103993019/173230967-98241849-7ec1-461a-9139-c2e6856d1373.PNG)
 ![8](https://user-images.githubusercontent.com/103993019/173230968-221e0b41-3052-425d-8d45-e3ac6250da28.PNG)
 ![9](https://user-images.githubusercontent.com/103993019/173230969-f9f31422-9607-4be8-bcca-b63926a4e608.PNG)
+
+## #3.6 ~ #3.7
+
+### 조건문(if else)을 넣어 기능을 다채롭게 하기.
+
+- 위처럼 h1을 title란 이름의 element로 가져왔을 때 title이 초록색일 때는 주황색으로, 아니라면 초록색으로 변하는 것을 onclick event만으로 만들 때는 함수에 조건문을 넣어주면 가능하다.
+
+```javascript
+const title = document.querySelector("div > h1");
+
+function handleTitleClick() {
+  const beforColor = title.style.color;
+  let afterColor = "";
+  if (beforColor === "teal") {
+    afterColor = "tomato";
+  } else {
+    afterColor = "teal";
+  }
+  title.style.color = afterColor;
+}
+
+title.addEventListener("click", handleTitleClick);
+```
+
+<!--teal-->
+<!--orange-->
+
+### js를 css와 함께 써서 style 바꾸기
+
+- js로 element 내의 property를 찾아서 직접 style을 바꾸는 것도 가능하지만 니꼬쌤 왈 가능한 style은 css를 사용해 바꿔주는 것이 좋다고 하신다.
+  해법은 그냥 className을 바꿔주는 것!
+
+```javascript
+const title = document.querySelector("div > h1");
+
+function handleTitleClick() {
+  const fontColor = title.className;
+  let afterColor = "";
+  if (fontColor === "teal") {
+    title.className = "orange";
+  } else {
+    title.className = "teal";
+  }
+  afterColor = title.className;
+}
+
+title.addEventListener("click", handleTitleClick);
+```
+
+<!--style-->
+<!--console ""-->
+<!--console changeColor-->
+
+## 22.06.13. #3.8
+
+### className이 복합적으로 있을 때 한 개만 쏙 집어 넣고 빼기
+
+- <div class="red"></div> 요렇게 있으면 위에처럼 className을 바꿔주는 것으로 style을 바꿀 수 있지만 <div class="font-blue red"></div> 이런식으로 여러개 있는 경우에는 저렇게 했다가는 기존에 있는 css효과가 없어져버린다.
+  그럴 때는 <클래스이름의 포함여부>를 확인 후 <추가> 혹은 <제거> 해주는 순서를 밟는다.
+  <클래스이름의 포함여부>로 쓰이는 것이 classList.contains <추가>는 classList.add, <제거>는 classList.remove를 써주면 된다.
+
+```javascript
+const title = document.querySelector("div > h1");
+
+function handleTitleClick() {
+  const colorName = "changeColor";
+  if (title.classList.contains(colorName)) {
+    title.classList.remove(colorName);
+  } else {
+    title.classList.add(colorName);
+  }
+}
+
+title.addEventListener("click", handleTitleClick);
+```
+
+<!--remove-->
+<!--add-->
+
+### 같은 기능 toggle 하나로 끝내기
+
+- 위의 함수는 포함여부 -> 추가 or 제거의 기능을 가지는데 처음부터 이 기능을 가진 내장함수가 존재한다.
+  contains + add + remove => toggle!!
+
+```javascript
+const title = document.querySelector("div > h1");
+
+function handleTitleClick() {
+  title.classList.toggle("changeColor");
+}
+
+title.addEventListener("click", handleTitleClick);
+```
+
+<!--remove toggle-->
+<!--add toggle-->

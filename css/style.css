@@ -1,3 +1,16 @@
 body {
   height: 200vh;
 }
+
+h1 {
+  color: orange;
+  transition: color 0.5s ease-in-out;
+}
+
+.font-style {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.changeColor {
+  color: teal;
+}
