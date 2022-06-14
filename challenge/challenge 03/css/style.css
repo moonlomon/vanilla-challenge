@@ -1,0 +1,16 @@
+body {
+  font-family: "Times New Roman", Times, serif;
+}
+
+#max-number {
+  font-weight: bolder;
+  margin-bottom: 20px;
+}
+
+#winner {
+  font-weight: bolder;
+}
+
+.hidden {
+  display: none;
+}

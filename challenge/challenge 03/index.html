@@ -8,6 +8,23 @@
     <title>Document</title>
   </head>
   <body>
+    <h1>Random Number Game</h1>
+    <form>
+      <div id="max-number">
+        <span>Generate a number between 0 and</span>
+        <input type="number" />
+      </div>
+      <div id="chose-number">
+        Guess the number:<input type="number" />
+        <input type="submit" value="play!" />
+      </div>
+      <div id="you-and-machine">
+        You chose: <span></span>, the machine chose: <span></span>.
+      </div>
+      <div id="winner">
+        <span class="hidden">You win</span><span class="hidden">You lost</span>
+      </div>
+    </form>
     <script src="app.js"></script>
   </body>
 </html>

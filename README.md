@@ -670,8 +670,6 @@ Form.addEventListener("submit", handleEnter);
 ![1](https://user-images.githubusercontent.com/103993019/173337999-600d5ccf-726d-4ea7-9afe-c06f2e41d25a.PNG)
 ![2](https://user-images.githubusercontent.com/103993019/173338003-4792a8bc-9492-43f0-bfbb-ea1ef18219bd.PNG)
 
-
-
 - 요걸 함수에 활용하면 입력한 문자를 집어 넣는 것도 가능하다!
 
 ```javascript
@@ -693,7 +691,6 @@ Form.addEventListener("submit", handleEnter);
 ```
 
 ![3](https://user-images.githubusercontent.com/103993019/173338007-4eba74cb-81a9-4f3f-9a18-5c0e7fe952f3.PNG)
-
 
 ### localStorage에 값이 없으면 Form이 보이게, form에 값을 입력해서 값이 저장되었다면 Int가 나오도록
 
