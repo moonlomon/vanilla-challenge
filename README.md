@@ -739,3 +739,58 @@ if (savedUsername === null) {
 ![4](https://user-images.githubusercontent.com/103993019/173338009-fc200868-1aa0-415d-b21b-00a204ceb3a7.PNG)
 ![5](https://user-images.githubusercontent.com/103993019/173338010-2da8b53d-f804-4893-bdad-3f8e80bce0f7.PNG)
 ![6](https://user-images.githubusercontent.com/103993019/173338011-32ee9ca0-a060-4fe5-bc16-d7bc1617f46f.PNG)
+
+## 22.06.15. #5.0 ~ #5.3
+
+### 자동 함수 실행, Intervals
+
+- 일정시간마다 함수를 작동시킬 수 있다.
+
+```javascript
+const clock = document.querySelector("#clock");
+
+function sayHello() {
+  console.log("hello!");
+}
+
+setInterval(sayHello, 2000);
+```
+
+<!--intervals-->
+
+### 실시간 가져오기, new date()
+
+- new date()를 찍으면 실시간을 가져올 수 있다.
+  .getHours()는 시를, .getMinutes()는 분을, .getSeconds()는 초를 가져온다.
+
+```javascript
+const clock = document.querySelector("#clock");
+
+function getClock() {
+  const date = new Date();
+  clock.innerText = `${date.getHours()} : ${date.getMinutes()} : ${date.getSeconds()}`;
+}
+
+setInterval(getClock, 1000);
+```
+
+### 0를 00으로 바꾸는 법, padStart
+
+- "string".padStart(원하는길이,'추가할문자')를 써주면 부족한 길이만큼 문자앞에 추가할문자가 추가된다.
+  date의 경우 숫자열이기 때문에 String으로 감싸준 후 출력하면 된다.
+  참고로 문자 뒤에 추가하려면 .padEnd()를 써주면 된다.
+
+```javascript
+const clock = document.querySelector("#clock");
+
+function getClock() {
+  const date = new Date();
+  const hours = String(date.getHours().padStart(2,"0"));
+  const minutes = String(date.getMinutes().padStart(2,"0"));
+  const seconds = String(date.getSeconds().padStart(2,"0"));
+  clock.innerText = `${hours} : ${minutes} : ${seconds}`
+
+  setInterval(getClock, 1000);
+```
+
+<!--String, padStart-->
