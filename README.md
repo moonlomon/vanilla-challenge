@@ -756,7 +756,8 @@ function sayHello() {
 setInterval(sayHello, 2000);
 ```
 
-<!--intervals-->
+![1](https://user-images.githubusercontent.com/103993019/173734214-268db146-abcc-4e73-b403-5a838065e740.PNG)
+
 
 ### 실시간 가져오기, new date()
 
@@ -773,6 +774,10 @@ function getClock() {
 
 setInterval(getClock, 1000);
 ```
+
+![2](https://user-images.githubusercontent.com/103993019/173734217-27feb7ca-352a-44d9-86c0-c6cf35f679ed.PNG)
+
+
 
 ### 0를 00으로 바꾸는 법, padStart
 
@@ -793,4 +798,4 @@ function getClock() {
   setInterval(getClock, 1000);
 ```
 
-<!--String, padStart-->
+![3](https://user-images.githubusercontent.com/103993019/173734218-2e959792-24ed-4278-b8ea-eddeab236237.PNG)
