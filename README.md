@@ -828,7 +828,7 @@ quote.innerText = choseQuotes.quote;
 author.innerText = choseQuotes.author;
 ```
 
-### 이미지를 랜덤하게 띄우기 + <img>를 js를 통해 브라우저에 추가하기
+### 이미지를 랜덤하게 띄우기 + img태그를 js를 통해 브라우저에 추가하기
 
 - 이미지폴더와 그 안에 파일들의 이름을 랜덤하게 출력할 수 있도록 array를 만들어준 후 위와 같은 방법을 사용한다.
   연결된 HTML파일 안에 이미지를 띄울 img태그가 없으므로 document.createElement()를 통해 태그를 생성하고 document.body.appendChild()를 이용해 브라우저에 태그를 추가해준다.
@@ -844,4 +844,5 @@ bgi.src = `img/${shoseImg}`;
 document.body.appendChild(bai);
 ```
 
-<!--이미지-->
+![1](https://user-images.githubusercontent.com/103993019/173999934-4d405e2e-3669-4555-97aa-fb63ffa37bee.PNG)
+
