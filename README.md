@@ -26,6 +26,8 @@ Vanilla challenge start 22.06.06.
 
 - obj.name or obj["name"] -> "SJ"
 
+---
+
 ## 22.06.08. #2.7 ~ #2.8
 
 ### function이란?
@@ -76,7 +78,7 @@ console.log(obj.name);
 obj.hello(2, 4);
 ```
 
-![3](https://user-images.githubusercontent.com/103993019/172543567-42b9610f-218b-4449-ab01-c19d45a57108.PNG)
+## ![3](https://user-images.githubusercontent.com/103993019/172543567-42b9610f-218b-4449-ab01-c19d45a57108.PNG)
 
 ## #2.9 ~ #2.12
 
@@ -145,7 +147,7 @@ console.log("I have solved it! " + calculator.add(50));
 console.log("I have solved it! " + calculator.min(50));
 ```
 
-![3](https://user-images.githubusercontent.com/103993019/172554601-ff7868a8-ca3b-4466-9aa8-c01dc3117bd3.PNG)
+## ![3](https://user-images.githubusercontent.com/103993019/172554601-ff7868a8-ca3b-4466-9aa8-c01dc3117bd3.PNG)
 
 ## #2.13
 
@@ -196,6 +198,8 @@ console.log(parseInt(age));
 
 ![7](https://user-images.githubusercontent.com/103993019/172561267-c3ddaf15-ea17-4fe5-a7eb-4592d2b74201.PNG)
 ![8](https://user-images.githubusercontent.com/103993019/172561269-2e557c05-7db1-4fe0-ac4e-fb1bd26eb33f.PNG)
+
+---
 
 ## #2.14 ~ 2.16
 
@@ -295,7 +299,7 @@ console.log(css1);
 console.log(css2);
 ```
 
-![9](https://user-images.githubusercontent.com/103993019/173184663-b688d3c1-bd21-40b0-b80a-e63b4ff4fef9.PNG)
+## ![9](https://user-images.githubusercontent.com/103993019/173184663-b688d3c1-bd21-40b0-b80a-e63b4ff4fef9.PNG)
 
 ## 22.06.12. #3.3 ~ 3.5
 
@@ -426,6 +430,8 @@ window.addEventListener("offline", handleWindowsOffline);
 ![8](https://user-images.githubusercontent.com/103993019/173230968-221e0b41-3052-425d-8d45-e3ac6250da28.PNG)
 ![9](https://user-images.githubusercontent.com/103993019/173230969-f9f31422-9607-4be8-bcca-b63926a4e608.PNG)
 
+---
+
 ## #3.6 ~ #3.7
 
 ### 조건문(if else)을 넣어 기능을 다채롭게 하기.
@@ -478,6 +484,8 @@ title.addEventListener("click", handleTitleClick);
 ![4](https://user-images.githubusercontent.com/103993019/173275019-50972fd4-babe-4f81-b37d-9ca242595217.PNG)
 ![5](https://user-images.githubusercontent.com/103993019/173275021-b971ed23-359c-48e4-8b29-f880fc701a14.PNG)
 
+---
+
 ## 22.06.13. #3.8
 
 ### className이 복합적으로 있을 때 한 개만 쏙 집어 넣고 빼기
@@ -521,6 +529,8 @@ title.addEventListener("click", handleTitleClick);
 
 ![8](https://user-images.githubusercontent.com/103993019/173275025-6722ed58-7c80-4d07-8833-bacd74e1e640.PNG)
 ![9](https://user-images.githubusercontent.com/103993019/173275026-f06c21fe-cac3-42be-8cb1-014d7d455ec3.PNG)
+
+---
 
 ## #4.0 ~ #4.4
 
@@ -616,7 +626,7 @@ function handleEnter(event) {
 Form.addEventListener("submit", handleEnter);
 ```
 
-![6](https://user-images.githubusercontent.com/103993019/173310754-ee608260-b017-4639-ad95-3d8c2f9f18f5.PNG)
+## ![6](https://user-images.githubusercontent.com/103993019/173310754-ee608260-b017-4639-ad95-3d8c2f9f18f5.PNG)
 
 ## #4.5 ~ #4.7
 
@@ -740,6 +750,8 @@ if (savedUsername === null) {
 ![5](https://user-images.githubusercontent.com/103993019/173338010-2da8b53d-f804-4893-bdad-3f8e80bce0f7.PNG)
 ![6](https://user-images.githubusercontent.com/103993019/173338011-32ee9ca0-a060-4fe5-bc16-d7bc1617f46f.PNG)
 
+---
+
 ## 22.06.15. #5.0 ~ #5.3
 
 ### 자동 함수 실행, Intervals
@@ -758,7 +770,6 @@ setInterval(sayHello, 2000);
 
 ![1](https://user-images.githubusercontent.com/103993019/173734214-268db146-abcc-4e73-b403-5a838065e740.PNG)
 
-
 ### 실시간 가져오기, new date()
 
 - new date()를 찍으면 실시간을 가져올 수 있다.
@@ -776,8 +787,6 @@ setInterval(getClock, 1000);
 ```
 
 ![2](https://user-images.githubusercontent.com/103993019/173734217-27feb7ca-352a-44d9-86c0-c6cf35f679ed.PNG)
-
-
 
 ### 0를 00으로 바꾸는 법, padStart
 
@@ -798,4 +807,41 @@ function getClock() {
   setInterval(getClock, 1000);
 ```
 
-![3](https://user-images.githubusercontent.com/103993019/173734218-2e959792-24ed-4278-b8ea-eddeab236237.PNG)
+## ![3](https://user-images.githubusercontent.com/103993019/173734218-2e959792-24ed-4278-b8ea-eddeab236237.PNG)
+
+## 22.06.16. #6.0 ~ #6.2
+
+### 명언을 랜덤하게 띄우기
+
+- array안에 명언을 넣은 후 array[]를 통해 해당 명언을 출력한다.
+  랜덤한 수를 []안에 넣기 위해서 Math.randomm()내장함수를, 수가 내림차순 정수가 되게 하기 위해서 Math.floor()를 써준다.
+
+```javascript
+const quotes = [];
+
+const quote = document.querySelector("#quotes > span:first-child");
+const author = document.querySelector("#quotes > span:last-child");
+
+const choseQuotes = quotes[Math.floor(Math.random() * quotes.length)];
+
+quote.innerText = choseQuotes.quote;
+author.innerText = choseQuotes.author;
+```
+
+### 이미지를 랜덤하게 띄우기 + <img>를 js를 통해 브라우저에 추가하기
+
+- 이미지폴더와 그 안에 파일들의 이름을 랜덤하게 출력할 수 있도록 array를 만들어준 후 위와 같은 방법을 사용한다.
+  연결된 HTML파일 안에 이미지를 띄울 img태그가 없으므로 document.createElement()를 통해 태그를 생성하고 document.body.appendChild()를 이용해 브라우저에 태그를 추가해준다.
+
+```javascript
+const images = ["1.webp", "2.webp", "3.webp"];
+const choseImg = images[Math.floor(Math.random() * imges.length)];
+
+const bgi = document.createElement("img");
+
+bgi.src = `img/${shoseImg}`;
+
+document.body.appendChild(bai);
+```
+
+<!--이미지-->
