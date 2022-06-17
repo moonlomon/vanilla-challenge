@@ -807,7 +807,7 @@ function getClock() {
   setInterval(getClock, 1000);
 ```
 
-## ![3](https://user-images.githubusercontent.com/103993019/173734218-2e959792-24ed-4278-b8ea-eddeab236237.PNG)
+![3](https://user-images.githubusercontent.com/103993019/173734218-2e959792-24ed-4278-b8ea-eddeab236237.PNG)
 
 ## 22.06.16. #6.0 ~ #6.2
 
@@ -846,3 +846,80 @@ document.body.appendChild(bai);
 
 ![1](https://user-images.githubusercontent.com/103993019/173999934-4d405e2e-3669-4555-97aa-fb63ffa37bee.PNG)
 
+## 22.06.17. 졸업작품 시작
+
+### #7.0 ~ #7.1
+
+- todo리스트를 띄우는 컴포넌트를 만들기 시작.
+
+1. 리스트를 입력한는 for태그와 입력한 리스트를 띄우는 ul태그를 만듦.
+
+```html
+<form id="todo-form">
+  <input
+    type="text"
+    placeholder="Write a To Do list and press Enter."
+    required
+  />
+</form>
+<ul id="todo-list"></ul>
+```
+
+2. input 안에 내용을 submit을 하면 그 내용이 list에 추가되는 방식이다.
+   input, submit, list를 불러올 수 있는 변수와 이벤트를 만들어 준다.
+
+```javascript
+const toDoForm = document.getElementById("todo-form");
+const toDoInput = toDoForm.querySelector("input");
+const toDoList = document.getElementById("todo-list");
+
+toDoForm.addEventListener("submit", handleTodoSubmit);
+```
+
+3. submit을 했을 때 새로고침이 되지 않아야 하고 list에 입력될 input안에 value가 없어지도록 함수를 설정해준다.
+
+```javascript
+function handleTodoSubmit(event) {
+  event.preventDefault();
+  const NewTodo = toDoInput.value;
+  console.log(NewTodo);
+  toDoInput.value = "";
+}
+```
+
+4. NewTodo가 li태그 안에 span의 모습으로 HTML태그 내 ul태그에 들어가야 한다.
+
+```javascript
+function paintTodo(NewTodo) {
+  const li = document.createElement("li");
+  const span = document.createElement("span");
+  li.appendChild(span);
+  span.innerText = NewTodo;
+  toDoList.appenSdChild(li);
+}
+```
+
+##### 모두 합하면 이런 모습이 된다.
+
+```javascript
+const toDoForm = document.getElementById("todo-form");
+const toDoInput = toDoForm.querySelector("input");
+const toDoList = document.getElementById("todo-list");
+
+function handleTodoSubmit(event) {
+  event.preventDefault();
+  const NewTodo = toDoInput.value;
+  toDoInput.value = "";
+  paintTodo(NewToddo);
+}
+
+function paintTodo(NewTodo) {
+  const li = document.createElement("li");
+  const span = document.createElement("span");
+  li.appendChild(span);
+  span.innerText = NewTodo;
+  toDolist.appendChild(li);
+}
+
+toDoForm.addEventListener("submit", handleTodoSubmit);
+```

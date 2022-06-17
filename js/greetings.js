@@ -13,7 +13,7 @@ function handleEnter(event) {
 }
 
 function inputUsername(userName) {
-  Int.innerText = `"Hello" ${userName}`;
+  Int.innerText = `Hello ${userName}!`;
   Int.classList.toggle(TOGGLE_CLASS);
 }
 

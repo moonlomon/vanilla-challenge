@@ -6,5 +6,3 @@ const bai = document.createElement("img");
 bai.src = `img/${choseImg}`;
 
 document.body.appendChild(bai);
-
-console.log(bai.src);
