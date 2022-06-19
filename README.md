@@ -923,3 +923,73 @@ function paintTodo(NewTodo) {
 
 toDoForm.addEventListener("submit", handleTodoSubmit);
 ```
+
+### #7.2
+
+- 삭제하는 버튼을 만들어줬다.
+
+1. 버튼엘리멘트를 만들고 어펜드차일드와 이벤트리스너를 적용.
+
+```javascript
+function paintTodo(NewTodo) {
+  const li = document.createElement("li");
+  const span = document.createElement("span");
+  span.innerText = NewTodo;
+  const button = document.createElement("button");
+  button.innerText = "❌";
+  button.addEventListener("click", deleteTodo);
+  li.appendChild(span);
+  li.appendChild(button);
+  toDoList.appendChild(li);
+}
+```
+
+2. 이벤트리스너에 적용시킨 함수를 만들어준다. 삭제버튼을 동작시킬 때 해당 리스트를 꼭 짚어주는 식이 있으나 이해를 못해서 그냥 외우기만 했다.
+
+```javascript
+funcion deleteTodo(event) {
+  const li = event.target.parentElement;
+  li.remove();
+}
+```
+
+## #7.3
+
+- 리스트를 로컬스토리지에 배열(array)형식으로 저장하기.
+
+1. 로컬스토리지에 들어갈 배열변수를 하나 만들어준다.
+
+```javascript
+const toDos = [];
+```
+
+2. 브라우저에 리스트를 띄우는 함수(기능되고있는) 아래에 리스트를 저장하는 함수를 만들어 넣어준다.
+
+```javascript
+function handleTodoSubmit(event) {
+  event.preventDefault();
+  const NewTodo = toDoInput.value;
+  toDoInput.value = "";
+  toDos.push(NewTodo);
+  paintTodo(NewTodo);
+  saveTodos();
+}
+```
+
+3. 저장역할을 할 함수에 로컬스토리지식을 만들어준다.
+
+```javascript
+funcion saveTodos() {
+  localStorage.setItem("toDos" toDos)
+}
+```
+
+4. 저장되는 리스트가 단순문자가 아닌 string형식으로 저장되기 위해선 특정 식을 같이 넣어줘야한다.
+
+```javascript
+funcion saveTodos() {
+  localStorage.setItem("toDos" JSON.stringify(toDos))
+}
+```
+
+### #7.4
